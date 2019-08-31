@@ -1,3 +1,4 @@
+use console::{style, Term};
 use dialoguer::Confirmation;
 
 struct Bio {
@@ -33,11 +34,24 @@ fn main() -> Result<(), &'static str> {
         },
     ];
 
+    let term = Term::stdout();
+
     for service in services {
         loop {
-            println!("{}", service.name);
-            println!("Open {}", service.update_profile_url);
-            println!("{}", bio.description);
+            term.write_line(&format!("[++ {} ++]", style(&service.name).cyan()))
+                .unwrap();
+            term.write_str("  ").unwrap();
+            term.write_line("Bio:").unwrap();
+            term.write_str("    ").unwrap();
+            term.write_line(&bio.description).unwrap();
+            term.write_line("").unwrap();
+            term.write_str("  ").unwrap();
+            term.write_line(&format!(
+                "Open {}",
+                style(&service.update_profile_url).underlined()
+            ))
+            .unwrap();
+            term.write_line("").unwrap();
 
             let done = Confirmation::new()
                 .with_text(&format!("Are you finished updating {}?", service.name))
