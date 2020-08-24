@@ -32,6 +32,10 @@ fn main() -> Result<(), &'static str> {
             name: "merveilles.town".into(),
             update_profile_url: "https://merveilles.town/settings/profile".into(),
         },
+        Service {
+            name: "github".into(),
+            update_profile_url: "https://github.com/settings/profile".into(),
+        },
     ];
 
     let term = Term::stdout();
