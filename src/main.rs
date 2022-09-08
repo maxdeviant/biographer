@@ -15,7 +15,7 @@ fn main() -> Result<(), &'static str> {
 
     let bio = Bio {
         description:
-            "宝霞龙. 26. Conjurer of code. Devourer of art. Pursuer of æsthetics. Soli Deo gloria. He/him."
+            "宝霞龙. 28. Conjurer of code. Devourer of art. Pursuer of æsthetics. Soli Deo gloria. He/him."
                 .into(),
     };
 
