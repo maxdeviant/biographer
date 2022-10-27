@@ -36,6 +36,10 @@ fn main() -> Result<(), &'static str> {
             name: "github".into(),
             update_profile_url: "https://github.com/settings/profile".into(),
         },
+        Service {
+            name: "lobsters".into(),
+            update_profile_url: "https://lobste.rs/settings".into(),
+        },
     ];
 
     let term = Term::stdout();
