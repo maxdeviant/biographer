@@ -1,3 +1,4 @@
+use chrono::prelude::*;
 use console::{style, Term};
 use dialoguer::Confirmation;
 
@@ -13,10 +14,13 @@ struct Service {
 fn main() -> Result<(), &'static str> {
     femme::start(log::LevelFilter::Trace).unwrap();
 
+    let birth_date = Local.with_ymd_and_hms(1994, 8, 24, 0, 0, 0).unwrap();
+    let today = Local::now();
+    let age = today.years_since(birth_date).unwrap_or(0);
+
     let bio = Bio {
         description:
-            "宝霞龙. 28. Conjurer of code. Devourer of art. Pursuer of æsthetics. Soli Deo gloria. He/him."
-                .into(),
+            format!("宝霞龙. {age}. Conjurer of code. Devourer of art. Pursuer of æsthetics. Soli Deo gloria. He/him."),
     };
 
     let services = vec![

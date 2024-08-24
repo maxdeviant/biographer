@@ -4,11 +4,10 @@ version = "0.1.0"
 authors = ["Marshall Bowers <elliott.codes@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+chrono = "0.4.38"
 console = "0.8"
 dialoguer = "0.4"
-indicatif = "0.11"
 femme = "1.2"
+indicatif = "0.11"
 log = "0.4"
