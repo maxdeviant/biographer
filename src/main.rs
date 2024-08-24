@@ -26,7 +26,7 @@ fn main() -> Result<(), &'static str> {
     let services = vec![
         Service {
             name: "are.na".into(),
-            update_profile_url: "https://www.are.na/settings/general".into(),
+            update_profile_url: "https://www.are.na/settings".into(),
         },
         Service {
             name: "twitter".into(),
