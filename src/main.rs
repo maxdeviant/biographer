@@ -33,10 +33,6 @@ fn main() -> Result<(), &'static str> {
             update_profile_url: "https://bsky.app/profile/maxdeviant.com".into(),
         },
         Service {
-            name: "twitter".into(),
-            update_profile_url: "https://twitter.com/settings/profile".into(),
-        },
-        Service {
             name: "merveilles.town".into(),
             update_profile_url: "https://merveilles.town/settings/profile".into(),
         },
